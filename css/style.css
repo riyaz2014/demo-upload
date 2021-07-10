@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+
+:root {
+  --violet: #6c5ce7;
+  --pink: #fc427b;
+  --gradient: linear-gradient(90deg, var(--violet), var(--pink));
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s ease-out;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #333;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 5rem;
+}
+
+body {
+  background: var(--gradient);
+  padding: 3rem 7%;
+}
+
+section {
+  padding: 2rem 7%;
+}
+
+.container {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.heading {
+  color: transparent;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  padding: 0 1rem;
+  padding-top: 2.5rem;
+  text-align: center;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 3rem;
+  border-radius: 0.5rem;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.btn:hover {
+  background: var(--gradient);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 7%;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 2.5rem;
+  color: var(--violet);
+  font-weight: bold;
+}
+
+header .logo span {
+  color: var(--pink);
+}
+
+header .navbar a {
+  margin-left: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+header .navbar a:hover {
+  color: var(--pink);
+}
+
+#menu {
+  font-size: 2.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: none;
+}
+.footer {
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.3);
+}
+
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+}
+
+.footer .box-container {
+  flex: 1 1 20rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.5rem;
+  color: var(--violet);
+  padding: 0.7rem 0;
+}
+.footer .box-container .box p {
+  font-size: 1.5rem;
+  color: #666;
+  padding: 0.7rem 0;
+}
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.5rem;
+  color: #666;
+  padding: 0.7rem 0;
+}
+.footer .box-container .box a:hover {
+  color: var(--pink);
+}
+.footer .box-container .box p i {
+  padding-right: 0.5rem;
+}
+
+.footer .credit {
+  font-size: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  padding-top: 2rem;
+  text-align: center;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.3);
+  color: #666;
+}
+
+.footer .credit span {
+  color: var(--pink);
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card .box {
+  display: flex;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  text-align: center;
+}
+
+/* .course .box img {
+  height: 200px;
+  width: 300px;
+} */
+/* media queries  */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  body {
+    padding: 1.5rem;
+  }
+
+  header {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu {
+    display: initial;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header .navbar a {
+    font-size: 2.5rem;
+    display: block;
+    margin: 2rem 0;
+    text-align: center;
+  }
+}
