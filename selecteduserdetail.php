@@ -67,7 +67,7 @@ if(isset($_POST['submit']))
 
                 if($query){
                      echo "<script> alert('Transaction Completed');
-                                     window.location='transactionhistory.php';
+                                     window.location='transectionHistory.php';
                            </script>";
                     
                 }
